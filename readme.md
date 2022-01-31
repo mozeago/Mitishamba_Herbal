@@ -4,4 +4,8 @@ herbal medicines that are readily available and one can use them for any ailment
 and help
 ## UI design
 ### Low Fidelity Design  
-![low fidelity ui design](mitishamba_herbal_low_fidelity_ui.PNG)
+![low fidelity ui design](mitishamba_herbal_low_fidelity_ui.PNG)  
+##### Technologies used:  
+1. Jetpack compose
+2. Google Material design components
+3. FireStore  
