@@ -12,7 +12,7 @@ and help
 
 ### High Fidelity Design
 
-![high fidelity ui design](mitishamba_herbal_low_fidelity_ui.PNG)
+![high fidelity ui design](mitishamba_herbal_high_fidelity_ui.PNG)
 
 ##### Technologies used:
 
