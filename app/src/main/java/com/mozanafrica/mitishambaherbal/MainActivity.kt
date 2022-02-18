@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -13,7 +12,6 @@ import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
@@ -40,7 +38,7 @@ fun PreviewFunctions() {
 
 @Composable
 fun HerbList() {
-    HerbCardLazyColumn()
+    HerbListLazyColumn()
 }
 
 @Composable
@@ -52,21 +50,20 @@ fun HerbListLazyColumn() {
             .wrapContentHeight()
     ) {
         items(items = list, itemContent = { text_changed ->
-            Text(text = text_changed, fontSize = 50.sp, fontStyle = FontStyle.Italic )
-            HerbListLazyColumn()
+            Text(text = "Title $text_changed", fontSize = 50.sp, fontStyle = FontStyle.Italic)
+            HerbCardLazyRow()
         })
 
     }
 }
 
 @Composable
-fun HerbCardLazyColumn() {
+fun HerbCardLazyRow() {
     val list = (0..10).map { it.toString() }
     LazyRow(
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentHeight()
-            .background(Color.Gray)
 
     ) {
         items(items = list, itemContent = { item ->
