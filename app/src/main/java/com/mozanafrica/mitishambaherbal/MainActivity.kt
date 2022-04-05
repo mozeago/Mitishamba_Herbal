@@ -24,6 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mozanafrica.mitishambaherbal.ui.theme.MitishambaHerbalTheme
+import com.mozanafrica.mitishambaherbal.ui.theme.Shapes
 import com.mozanafrica.mitishambaherbal.ui.theme.grey_light
 
 class MainActivity : ComponentActivity() {
@@ -112,10 +113,16 @@ fun HerbCardLazyRow() {
 fun HerbSingleCard() {
     val paddingTenDp = Modifier.padding(10.dp)
     Card(
-        elevation = 10.dp, modifier = Modifier
-            .padding(10.dp)
-            .width(320.dp)
-    ) {
+        elevation = 10.dp,
+        modifier = Modifier
+            .padding(15.dp)
+            .fillMaxWidth()
+            .clickable { },
+        shape = MaterialTheme.shapes.medium,
+        backgroundColor = MaterialTheme.colors.surface,
+
+
+        ) {
         Column(modifier = paddingTenDp) {
             Image(
                 painter = painterResource(id = R.drawable.mitishambaherbal),
