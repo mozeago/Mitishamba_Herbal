@@ -1,4 +1,4 @@
-package com.example.mitishambaherbal.view.dashboard
+package com.mozanafrica.mitishambaherbal.view.dashboard
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
@@ -10,8 +10,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.mitishambaherbal.model.Herb
-import com.example.mitishambaherbal.screen.HerbCardRecentlyAdded
+import com.mozanafrica.mitishambaherbal.model.Herb
+import com.mozanafrica.mitishambaherbal.screen.HerbCardRecentlyAdded
 
 
 @Composable
@@ -40,6 +40,11 @@ fun RecentlyAddedHeading() {
                 "Nam placerat risus",
                 "Nulla vel justo pellentesque",
                 "Cras a augue et magna maximus pharetra maximus fringilla tellus. Morbi ligula velit, mollis vitae ullamcorper non, varius vel magna. In tempus euismod varius. Quisque malesuada, tellus id scelerisque placerat, nulla massa convallis magna, et tincidunt tortor orci ut orci. Sed ante mauris, faucibus in sapien",
+                "https://picsum.photos/200"
+            ), Herb(
+                "Maecenas bibendum",
+                "Praesent eu interdum mi",
+                "Mauris ante urna, pellentesque a facilisis auctor, sollicitudin at purus. Integer ut enim id turpis condimentum eleifend. Sed tortor ipsum, pulvinar luctus hendrerit eu, interdum et nunc. Nunc fermentum imperdiet consequat.",
                 "https://picsum.photos/200"
             ), Herb(
                 "Maecenas bibendum",

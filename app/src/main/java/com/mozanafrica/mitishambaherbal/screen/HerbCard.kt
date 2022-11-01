@@ -1,21 +1,32 @@
-package com.example.mitishambaherbal.screen
+package com.mozanafrica.mitishambaherbal.screen
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
-import com.example.mitishambaherbal.model.Herb
+import androidx.compose.ui.unit.dp
+import com.mozanafrica.mitishambaherbal.model.Herb
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun HerbCard(herb: Herb, cardWidth: Dp, cardHeight: Dp) {
-    Card(onClick = { /*TODO*/ }) {
+    val paddingValueTen = Modifier.padding(10.dp)
+    val maximumLinesForCards = 2
+    Card(
+        onClick = { /*TODO*/ },
+        elevation = 10.dp,
+        modifier = paddingValueTen
+            .width(cardWidth)
+    ) {
         Column() {
-            Text(text = herb.image)
-            Text(text = herb.title)
-            Text(text = herb.description)
+            Text(text = herb.image, paddingValueTen)
+            Text(text = herb.title, paddingValueTen)
+            Text(text = herb.description, paddingValueTen, maxLines = maximumLinesForCards)
         }
     }
 }

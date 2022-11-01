@@ -1,4 +1,4 @@
-package com.example.mitishambaherbal.navigation
+package com.mozanafrica.mitishambaherbal.navigation
 
 sealed class Screen(val route: String) {
     object OnBoarding : Screen(route = "onboarding")
