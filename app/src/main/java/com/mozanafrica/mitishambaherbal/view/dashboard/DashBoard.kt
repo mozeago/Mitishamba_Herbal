@@ -1,17 +1,13 @@
 package com.mozanafrica.mitishambaherbal.view.dashboard
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 import com.mozanafrica.mitishambaherbal.screen.HerbCardRecentlyAdded
+import com.mozanafrica.mitishambaherbal.screen.HerbCategory
+import com.mozanafrica.mitishambaherbal.screen.RowTitle
 
 
 @Composable
@@ -22,19 +18,7 @@ fun DashboardScreenView(navController: NavHostController) {
 @Composable
 fun RecentlyAddedHeading() {
     Column() {
-        Row(
-            horizontalArrangement = Arrangement.SpaceBetween,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(10.dp)
-        ) {
-            Text(
-                "Recently Added", style = TextStyle(
-                    fontSize = 20.sp, fontWeight = FontWeight.Medium
-                )
-            )
-            Text("See All", style = MaterialTheme.typography.caption)
-        }
+        RowTitle(titleStart = "Recently Added", "see all")
         val recently_added_herbs = listOf(
             Herb(
                 "Nam placerat risus",
@@ -53,7 +37,18 @@ fun RecentlyAddedHeading() {
                 "https://picsum.photos/200"
             )
         )
+        val herbs_categories = listOf(
+            DataClassHerbCategory("Mgongo"),
+            DataClassHerbCategory("Miguu"),
+            DataClassHerbCategory("Kichwa"),
+            DataClassHerbCategory("Marohani"),
+            DataClassHerbCategory("Kisomo Cha Kuvuta"),
+            DataClassHerbCategory("Zuia Wezi Na Uchawi"),
+            DataClassHerbCategory("Maradhi Sugu"),
+            DataClassHerbCategory("Mtu Aliyetupiwa"),
+        )
         HerbCardRecentlyAdded(herbs = recently_added_herbs)
+        HerbCategory(recently_added_herbs, herbsCategories = herbs_categories)
     }
 }
 
