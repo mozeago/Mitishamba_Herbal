@@ -1,11 +1,11 @@
-package com.example.mitishambaherbal.navigation
+package com.mozanafrica.mitishambaherbal.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.mitishambaherbal.view.dashboard.DashboardScreenView
-import com.example.mitishambaherbal.view.welcome.OnBoardingScreenView
+import com.mozanafrica.mitishambaherbal.view.dashboard.DashboardScreenView
+import com.mozanafrica.mitishambaherbal.view.welcome.OnBoardingScreenView
 
 @Composable
 fun NavGraphSetup(navController: NavHostController) {

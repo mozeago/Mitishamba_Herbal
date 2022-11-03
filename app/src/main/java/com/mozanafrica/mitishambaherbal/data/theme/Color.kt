@@ -1,4 +1,4 @@
-package com.example.mitishambaherbal.ui.theme
+package com.mozanafrica.mitishambaherbal.data.theme
 
 import androidx.compose.ui.graphics.Color
 

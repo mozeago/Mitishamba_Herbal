@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="Theme.MitishambaHerbal" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
-    </style>
-=======
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.MitishambaHerbal" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
@@ -30,5 +23,4 @@
     <style name="Theme.MitishambaHerbal.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.MitishambaHerbal.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
->>>>>>> 50ad952ede407a4fe586b5a761cf416c414ebad6
 </resources>
