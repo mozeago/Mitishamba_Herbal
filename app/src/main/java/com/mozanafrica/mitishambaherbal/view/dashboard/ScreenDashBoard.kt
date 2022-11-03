@@ -3,6 +3,7 @@ package com.mozanafrica.mitishambaherbal.view.dashboard
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 import com.mozanafrica.mitishambaherbal.screen.HerbCardRecentlyAdded

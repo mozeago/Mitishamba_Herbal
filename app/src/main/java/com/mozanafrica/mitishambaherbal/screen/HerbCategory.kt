@@ -8,11 +8,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.rememberNavController
 import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 
 @Composable
 fun HerbCategory(herbsCategories: List<DataClassHerbCategory>, herbs: List<Herb>) {
+    val navController = rememberNavController()
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.dp
     val screenHeight = configuration.screenHeightDp.dp
@@ -25,7 +27,13 @@ fun HerbCategory(herbsCategories: List<DataClassHerbCategory>, herbs: List<Herb>
             RowTitle(titleStart = herbCategory.categoryName)
             LazyRow(content = {
                 items(herbs) { herb ->
-                    HerbCard(herb = herb, cardWidth = cardWidth, cardHeight = cardHeight)
+                    HerbCard(
+                        herb = herb,
+                        cardWidth = cardWidth,
+                        cardHeight = cardHeight,
+                        navController,
+                        "singlecard"
+                    )
                 }
             })
         }
