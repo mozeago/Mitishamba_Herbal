@@ -12,7 +12,7 @@ import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 
 @Composable
-fun HerbCategory(herbs: List<Herb>, herbsCategories: List<DataClassHerbCategory>) {
+fun HerbCategory(herbsCategories: List<DataClassHerbCategory>, herbs: List<Herb>) {
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.dp
     val screenHeight = configuration.screenHeightDp.dp

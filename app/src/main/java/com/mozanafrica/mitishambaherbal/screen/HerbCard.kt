@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.mozanafrica.mitishambaherbal.model.Herb
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -24,7 +25,7 @@ fun HerbCard(herb: Herb, cardWidth: Dp, cardHeight: Dp) {
             .width(cardWidth)
     ) {
         Column() {
-            Text(text = herb.image, paddingValueTen)
+            AsyncImage(model = herb.image, contentDescription = "herb image")
             Text(text = herb.title, paddingValueTen)
             Text(text = herb.description, paddingValueTen, maxLines = maximumLinesForCards)
         }

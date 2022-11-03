@@ -24,17 +24,17 @@ fun RecentlyAddedHeading() {
                 "Nam placerat risus",
                 "Nulla vel justo pellentesque",
                 "Cras a augue et magna maximus pharetra maximus fringilla tellus. Morbi ligula velit, mollis vitae ullamcorper non, varius vel magna. In tempus euismod varius. Quisque malesuada, tellus id scelerisque placerat, nulla massa convallis magna, et tincidunt tortor orci ut orci. Sed ante mauris, faucibus in sapien",
-                "https://picsum.photos/200"
+                "https://picsum.photos/200/300"
             ), Herb(
                 "Maecenas bibendum",
                 "Praesent eu interdum mi",
                 "Mauris ante urna, pellentesque a facilisis auctor, sollicitudin at purus. Integer ut enim id turpis condimentum eleifend. Sed tortor ipsum, pulvinar luctus hendrerit eu, interdum et nunc. Nunc fermentum imperdiet consequat.",
-                "https://picsum.photos/200"
+                "https://picsum.photos/200/300"
             ), Herb(
                 "Maecenas bibendum",
                 "Praesent eu interdum mi",
                 "Mauris ante urna, pellentesque a facilisis auctor, sollicitudin at purus. Integer ut enim id turpis condimentum eleifend. Sed tortor ipsum, pulvinar luctus hendrerit eu, interdum et nunc. Nunc fermentum imperdiet consequat.",
-                "https://picsum.photos/200"
+                "https://picsum.photos/200/300"
             )
         )
         val herbs_categories = listOf(
@@ -48,7 +48,7 @@ fun RecentlyAddedHeading() {
             DataClassHerbCategory("Mtu Aliyetupiwa"),
         )
         HerbCardRecentlyAdded(herbs = recently_added_herbs)
-        HerbCategory(recently_added_herbs, herbsCategories = herbs_categories)
+        HerbCategory(herbsCategories = herbs_categories, recently_added_herbs)
     }
 }
 
