@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.mozanafrica.mitishambaherbal.view.dashboard.DashboardScreenView
+import com.mozanafrica.mitishambaherbal.view.singlecard.ComposableSingleCardView
 import com.mozanafrica.mitishambaherbal.view.welcome.OnBoardingScreenView
 
 @Composable
@@ -15,6 +16,9 @@ fun NavGraphSetup(navController: NavHostController) {
         }
         composable(route = Screen.DashBoard.route) {
             DashboardScreenView(navController)
+        }
+        composable(route = Screen.SingleCard.route) {
+            ComposableSingleCardView(navController)
         }
     }
 }

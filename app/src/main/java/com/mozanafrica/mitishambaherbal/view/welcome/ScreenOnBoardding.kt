@@ -28,8 +28,7 @@ fun OnBoardingScreenView(navController: NavHostController) {
 //            .fillMaxSize()
 //    )
     Box(
-        modifier = Modifier
-            .fillMaxSize()
+        modifier = Modifier.fillMaxSize()
     ) {
         TotalHerbs(totalCount = 250)
         TambuaFaidaYaMitishamba(navController)
@@ -70,16 +69,21 @@ fun TambuaFaidaYaMitishamba(navController: NavHostController) {
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text(
-                    text = "Skip",
+                Text(text = "Skip",
                     color = Color.Black,
-                    style = MaterialTheme.typography.body1, fontSize = 20.sp,
+                    style = MaterialTheme.typography.body1,
+                    fontSize = 20.sp,
                     modifier = Modifier.clickable {
                         navController.navigate(Screen.DashBoard.route)
-                    }
-                )
+                    })
                 Button(onClick = { /*TODO*/ }) {
-                    Text(text = "Next")
+                    Text(
+                        text = "Next",
+//                        modifier = Modifier.clickable {
+//                            navController.navigate(Screen.SingleCard.route)
+//                        }
+                    )
+
                 }
             }
         }
