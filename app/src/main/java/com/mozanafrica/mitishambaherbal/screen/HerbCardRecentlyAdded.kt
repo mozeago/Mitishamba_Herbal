@@ -7,6 +7,7 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.mozanafrica.mitishambaherbal.model.Herb
+import com.mozanafrica.mitishambaherbal.navigation.Screen
 
 @Composable
 fun HerbCardRecentlyAdded(herbs: List<Herb>) {
@@ -22,8 +23,8 @@ fun HerbCardRecentlyAdded(herbs: List<Herb>) {
                 herb = herb,
                 cardWidth = cardWidth,
                 cardHeight = cardHeight,
-                navController,
-                "singlecard"
+                Screen.SingleCard.route,
+                navController
             )
         }
     }

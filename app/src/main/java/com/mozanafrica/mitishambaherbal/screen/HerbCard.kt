@@ -22,16 +22,21 @@ fun HerbCard(
     herb: Herb,
     cardWidth: Dp,
     cardHeight: Dp,
-    navController: NavHostController? = null,
-    route: String
+    destinationRoute: String? = null,
+    navController: NavHostController
 ) {
     val context = LocalContext.current
     val paddingValueTen = Modifier.padding(10.dp)
     val maximumLinesForCards = 2
     Card(
         onClick = {
-            Toast.makeText(context, "Madawa ya Kiasili", Toast.LENGTH_SHORT).show()
-                navController?.navigate(route)
+            if (destinationRoute != null) {
+                if (navController != null) {
+                    Toast.makeText(context, "Navcontroller not empty", Toast.LENGTH_LONG).show()
+                    navController.navigate(destinationRoute)
+                }
+            }
+
         }, elevation = 10.dp, modifier = paddingValueTen.width(cardWidth)
     ) {
         Column {

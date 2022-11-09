@@ -10,7 +10,7 @@ import com.mozanafrica.mitishambaherbal.view.welcome.OnBoardingScreenView
 
 @Composable
 fun NavGraphSetup(navController: NavHostController) {
-    NavHost(navController = navController, startDestination = Screen.SingleCard.route) {
+    NavHost(navController = navController, startDestination = Screen.OnBoarding.route) {
         composable(route = Screen.OnBoarding.route) {
             OnBoardingScreenView(navController)
         }
@@ -18,7 +18,7 @@ fun NavGraphSetup(navController: NavHostController) {
             DashboardScreenView(navController)
         }
         composable(route = Screen.SingleCard.route) {
-            ComposableSingleCardView(navHostController = navController)
+            ComposableSingleCardView(navController)
         }
     }
 }

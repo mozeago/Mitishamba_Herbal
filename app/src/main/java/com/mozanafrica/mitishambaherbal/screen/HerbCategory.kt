@@ -11,6 +11,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
+import com.mozanafrica.mitishambaherbal.navigation.Screen
 
 @Composable
 fun HerbCategory(herbsCategories: List<DataClassHerbCategory>, herbs: List<Herb>) {
@@ -31,8 +32,8 @@ fun HerbCategory(herbsCategories: List<DataClassHerbCategory>, herbs: List<Herb>
                         herb = herb,
                         cardWidth = cardWidth,
                         cardHeight = cardHeight,
-                        navController,
-                        "singlecard"
+                        Screen.SingleCard.route,
+                        navController
                     )
                 }
             })
