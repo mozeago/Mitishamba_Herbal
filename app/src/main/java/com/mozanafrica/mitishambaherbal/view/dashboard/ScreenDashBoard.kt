@@ -1,16 +1,24 @@
+@file:OptIn(ExperimentalMaterialApi::class)
+
 package com.mozanafrica.mitishambaherbal.view.dashboard
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.mozanafrica.mitishambaherbal.component.AppBottomNavigation
+import com.mozanafrica.mitishambaherbal.component.TopAppBarChip
+import com.mozanafrica.mitishambaherbal.component.TopAppBarSearch
 import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 import com.mozanafrica.mitishambaherbal.navigation.Screen
@@ -19,9 +27,24 @@ import com.mozanafrica.mitishambaherbal.screen.HerbCardRecentlyAdded
 import com.mozanafrica.mitishambaherbal.screen.RowTitle
 
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun DashboardScreenView(navController: NavHostController) {
-    RecentlyAddedHeading(navController)
+    Scaffold(
+        topBar = {
+            Column() {
+                TopAppBarSearch()
+                Row() {
+                    TopAppBarChip()
+                }
+            }
+
+        },
+        bottomBar = { AppBottomNavigation(navHostController = navController) }
+    ) {
+        RecentlyAddedHeading(navController)
+    }
+
 
 }
 

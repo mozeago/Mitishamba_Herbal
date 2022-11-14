@@ -8,4 +8,5 @@
     <string name="mzalia_nyuma_title">Mzalia nyuma</string>
     <string name="mzalia_nyuma_sub_title">Mzalia nyuma</string>
     <string name="text_placeholder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur</string>
+    <string name="text_placeholder_search">Search</string>
 </resources>
