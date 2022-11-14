@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.mozanafrica.mitishambaherbal.component.AppBottomNavigation
 import com.mozanafrica.mitishambaherbal.model.DataClassHerbCategory
 import com.mozanafrica.mitishambaherbal.model.Herb
 import com.mozanafrica.mitishambaherbal.navigation.Screen
@@ -21,6 +22,7 @@ import com.mozanafrica.mitishambaherbal.screen.RowTitle
 @Composable
 fun DashboardScreenView(navController: NavHostController) {
     RecentlyAddedHeading(navController)
+
 }
 
 @Composable
