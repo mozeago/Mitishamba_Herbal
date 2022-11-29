@@ -80,7 +80,7 @@ fun RecentlyAddedHeading(navController: NavHostController) {
             DataClassHerbCategory("Maradhi Sugu"),
             DataClassHerbCategory("Mtu Aliyetupiwa"),
         )
-        HerbCardRecentlyAdded(herbs = recently_added_herbs)
+        HerbCardRecentlyAdded(herbs = recently_added_herbs, navController)
         val configuration = LocalConfiguration.current
         val screenWidth = configuration.screenWidthDp.dp
         val screenHeight = configuration.screenHeightDp.dp

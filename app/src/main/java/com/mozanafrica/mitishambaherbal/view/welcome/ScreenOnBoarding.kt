@@ -17,16 +17,6 @@ import com.mozanafrica.mitishambaherbal.navigation.Screen
 
 @Composable
 fun OnBoardingScreenView(navController: NavHostController) {
-//    Image(
-//        painter = painterResource(id = R.drawable.mitishamba_herb_variety),
-//        contentDescription = "Mitishamba shop with Herbs",
-//        contentScale = ContentScale.Crop,
-//        modifier = Modifier
-////            .clickable {
-////                navController.navigate(Screen.DashBoard.route)
-////            }
-//            .fillMaxSize()
-//    )
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -79,9 +69,9 @@ fun TambuaFaidaYaMitishamba(navController: NavHostController) {
                 Button(onClick = { /*TODO*/ }) {
                     Text(
                         text = "Next",
-//                        modifier = Modifier.clickable {
-//                            navController.navigate(Screen.SingleCard.route)
-//                        }
+                        modifier = Modifier.clickable {
+                            navController.navigate(Screen.SingleCard.route)
+                        }
                     )
 
                 }
